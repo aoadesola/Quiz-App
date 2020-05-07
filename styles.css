@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header,
+.question-count,
+[data-score],
+footer {
+  align-self: center;
+}
+
+main,
+.answers,
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+form {
+  margin: auto;
+  opacity: 0;
+}
+
+form.opacity {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+label {
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+label:hover {
+  border: 1px solid rgba(0, 0, 122, 0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.correct-option {
+  background-color: rgb(0, 197, 0);
+  border: 1px solid rgb(0, 197, 0);
+  color: #fff;
+}
+
+.wrong-option {
+  background-color: rgb(197, 0, 0);
+  border: 1px solid rgb(197, 0, 0);
+  color: #fff;
+}
+
+button {
+  padding: 1rem;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  border-radius: 0px;
+  transition: box-shadow 0.1s ease-in;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    max-width: 405px;
+  }
+}
